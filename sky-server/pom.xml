@@ -34,6 +34,13 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- IntelliJ 运行 JUnit5 测试需要 junit-platform-launcher，否则报"无法解析 junit-platform-launcher" -->
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-launcher</artifactId>
+            <scope>test</scope>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
