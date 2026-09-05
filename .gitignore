@@ -1,0 +1,40 @@
+# 编译输出目录
+target/
+*.class
+
+# IDE 配置文件（IntelliJ IDEA）
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Eclipse
+.classpath
+.project
+.settings/
+bin/
+
+# VS Code
+.vscode/
+
+# 操作系统文件
+.DS_Store
+Thumbs.db
+
+# 日志文件
+*.log
+logs/
+
+# Maven 本地构建产物
+*.war
+*.ear
+*.nar
+*.zip
+
+# 敏感配置文件（含数据库密码等，建议忽略开发环境配置）
+# application-dev.yml 里含数据库账号密码，按需决定是否提交
+# application-dev.yml
+
+# 临时文件
+*.tmp
+*.temp
