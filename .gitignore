@@ -31,9 +31,8 @@ logs/
 *.nar
 *.zip
 
-# 敏感配置文件（含数据库密码等，建议忽略开发环境配置）
-# application-dev.yml 里含数据库账号密码，按需决定是否提交
-# application-dev.yml
+# 敏感配置文件（含数据库密码、OSS密钥等，不提交）
+application-dev.yml
 
 # 临时文件
 *.tmp
