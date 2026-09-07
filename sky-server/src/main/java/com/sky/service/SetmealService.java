@@ -1,0 +1,12 @@
+package com.sky.service;
+
+import com.sky.dto.SetmealDTO;
+
+public interface SetmealService {
+
+    /**
+     * 新增套餐，同时需要保存菜品和套餐的关联
+     * @param setmealDTO
+     */
+    void saveWithDish(SetmealDTO setmealDTO);
+}
