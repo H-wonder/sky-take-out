@@ -44,7 +44,7 @@ public class JwtTokenUserInterceptor implements HandlerInterceptor {
             log.info("jwt校验：{}",token);
             Claims claims= JwtUtil.parseJWT(jwtProperties.getUserSecretKey(),token);
             Long userId=Long.valueOf(claims.get(JwtClaimsConstant.USER_ID).toString());
-            log.info("当前用户的id：",userId);
+            log.info("当前用户的id：{}", userId);
             BaseContext.setCurrentId(userId);
 
             return true;
@@ -52,5 +52,13 @@ public class JwtTokenUserInterceptor implements HandlerInterceptor {
             response.setStatus(401);
             return false;
         }
+    }
+
+    /**
+     * 请求结束后清空当前线程持有的用户id，避免线程池复用导致数据串号
+     */
+    @Override
+    public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
+        BaseContext.removeCurrentId();
     }
 }
