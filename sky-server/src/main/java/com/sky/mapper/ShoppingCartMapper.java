@@ -28,4 +28,10 @@ public interface ShoppingCartMapper {
     void insert(ShoppingCart shoppingCart);
 
     void deleteByUserId(Long currentId);
+
+    /**
+     * 批量插入购物车数据
+     * @param shoppingCartList
+     */
+    void insertBatch(List<ShoppingCart> shoppingCartList);
 }

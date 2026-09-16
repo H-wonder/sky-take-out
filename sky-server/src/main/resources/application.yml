@@ -63,3 +63,8 @@ sky:
     weChatPayCertFilePath: ${sky.wechat.weChatPayCertFilePath}
     notifyUrl: ${sky.wechat.notifyUrl}
     refundNotifyUrl: ${sky.wechat.refundNotifyUrl}
+
+  shop:
+    address: 武汉市洪山区武汉大学信息学部国软C4舍
+  baidu:
+    ak: TYrIzNSqmcujxhmdP3f0CSvMs1YPKzsz
