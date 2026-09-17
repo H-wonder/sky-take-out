@@ -99,6 +99,8 @@ public class WebMvcConfiguration extends WebMvcConfigurationSupport {
     protected void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/doc.html").addResourceLocations("classpath:/META-INF/resources/");
         registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
+        // WebSocket 测试页面（仅测试用，学完可连同 websocket.html 一起删掉）
+        registry.addResourceHandler("/websocket.html").addResourceLocations("classpath:/static/");
     }
 
     /**
