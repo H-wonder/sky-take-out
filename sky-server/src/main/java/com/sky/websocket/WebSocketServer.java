@@ -61,6 +61,7 @@ public class WebSocketServer {
                 session.getBasicRemote().sendText(message);
             }catch (Exception e){
                 e.printStackTrace();
+
             }
         }
     }
