@@ -1,0 +1,40 @@
+# ============================================================
+# 使用说明：
+#   1. 复制本文件为同目录下的 application-dev.yml
+#        cp application-dev.yml.example application-dev.yml
+#   2. 把下面所有 <...> 占位符替换成你自己的真实配置
+#
+# application-dev.yml 已被 .gitignore 忽略，属于本地文件，不会提交
+# 这里存放数据库密码、OSS 密钥等敏感信息，切勿提交到版本库
+# ============================================================
+
+sky:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    host: localhost
+    port: 3306
+    database: sky_take_out
+    username: root
+    password: <你的 MySQL 密码>
+
+  alioss:
+    endpoint: <你的 OSS 地域节点，如 oss-cn-hangzhou.aliyuncs.com>
+    access-key-id: <你的 OSS AccessKeyId>
+    access-key-secret: <你的 OSS AccessKeySecret>
+    bucket-name: <你的 OSS Bucket 名称>
+
+  redis:
+    host: localhost
+    port: 6379
+    database: 10
+
+  wechat:
+    appid: <你的微信小程序 appid>
+    secret: <你的微信小程序 secret>
+    mchid: <你的微信支付商户号>
+    mchSerialNo: <你的商户证书序列号>
+    privateKeyFilePath: /path/to/apiclient_key.pem
+    apiV3Key: <你的 APIv3 密钥>
+    weChatPayCertFilePath: /path/to/wechatpay_cert.pem
+    notifyUrl: <你的支付回调地址>
+    refundNotifyUrl: <你的退款回调地址>

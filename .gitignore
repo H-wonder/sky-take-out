@@ -33,6 +33,7 @@ logs/
 
 # 敏感配置文件（含数据库密码、OSS密钥等，不提交）
 application-dev.yml
+application.yml
 
 # 临时文件
 *.tmp
